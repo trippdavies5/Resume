@@ -1,8 +1,11 @@
+#ifndef CIRCULARDYNAMICARRAY_H
+#define CIRCULARDYNAMICARRAY_H
 #include <iostream>
 using namespace std;
 template <typename elmtype>
 class CircularDynamicArray {
-private:
+// private:
+public:
     int cap;  
     int size;      
     elmtype *data; 
@@ -278,7 +281,7 @@ private:
     return data[head];
     }
 
-public:
+// public:
     
     CircularDynamicArray() {
         cap = 2;
@@ -342,6 +345,7 @@ public:
     }
     void operator=(const CircularDynamicArray<elmtype> &copy)
     {
+        delete[] data;
         cap = copy.cap;
         size = copy.size;
         head = copy.head;
@@ -401,11 +405,13 @@ public:
             if (size == cap) {
                 twice();
             }
-            // data[tail] = v;
-            // tail = (tail + 1) % cap;
+            
             tail = (tail + 1) % cap;
             data[tail] = v;
             size++;
+            // tail = (tail + 1) % cap;
+            // data[tail] = v;
+            
         }
     }
 
@@ -624,3 +630,4 @@ public:
     
 };
     
+#endif
