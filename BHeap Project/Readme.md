@@ -1,1 +1,3 @@
+# BHeap
 
+This C++ file contains an implementation of a Binary Heap, a fundamental data structure commonly used in various algorithms and applications. My implementation showcases efficient memory usage and optimal performance characteristics of binary heaps, including operations like insertion, deletion, and heapification. This Binary Heap is designed to demonstrate both min-heap and max-heap properties, making it versatile for sorting and priority queue applications. The code is well-documented and structured, making it ideal for educational purposes and practical implementation in complex systems. CircularDynamicArray.cpp Heap.cpp BHeap.cpp makefile
